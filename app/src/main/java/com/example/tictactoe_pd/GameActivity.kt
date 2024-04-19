@@ -50,7 +50,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
 
     fun setUI(firstPlayer: String?, secondPlayer: String?){
 
-
+        //UI konfiguresana
         GameModel?.apply{
             binding.btn0.text = filled[0]
             binding.btn1.text = filled[1]
@@ -66,14 +66,18 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
 
             binding.gameStatus.text =
                 when(gameStat){
+                    //seit mes mainam pogas prieks speles sakuma visibility, lai nevatretu to uzpiest speles laika
+                    //Created-game id butu vajadzigs prieks online spelei
                     GameStat.CREATED ->{
                         binding.startGameBtn.visibility = View.INVISIBLE
                         "Game Id :" + gameId
 
                     }
                     GameStat.JOINED ->{
-                        "Click to start!"
+                        "Greetings, $firstPlayer and $secondPlayer, Click on Start/Restart to Start the Game!"
+                        //seit mes aisutam greeting message prieks musu speletajiem, ka ari teicam lai vini uzpiestu uz start/restart pogu, lai saktu speli
                     }
+                    //seit mes skatamies kurs no speletajiem ies un izveidojam textmessage 
                     GameStat.INPROGRESS ->{
                         binding.startGameBtn.visibility = View.INVISIBLE
                         if(currentPlayer == "X"){
@@ -84,6 +88,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
                         }
                     }
                     GameStat.FINISHED ->{
+                        //seit mes izveidojam tekstu, kurs winneja
                         if(winner == "X") {
                             "$firstPlayer won!"
                         }
@@ -115,6 +120,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun checkWin(){
+        //seit mes parbaudam, kuras pozicijas ir vinnejosas(kadas array vertibas)
         val winPositions = arrayOf(
             intArrayOf(0,1,2),
             intArrayOf(3,4,5),
@@ -146,6 +152,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         GameModel?.apply {
+            //seit mes apstradajam klikus
             if(gameStat!= GameStat.INPROGRESS){
                 Toast.makeText(applicationContext, "Game is not started!",Toast.LENGTH_SHORT).show()
                 return
