@@ -10,6 +10,7 @@ class PlayerNames : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player_names)
+        //seit mes nemam vertibas no EditText laukiem
         val player1EditText: EditText = findViewById(R.id.player_name)
         val player2EditText: EditText = findViewById(R.id.player2_name)
         val button : Button= findViewById(R.id.start_offline_btn)
@@ -19,6 +20,7 @@ class PlayerNames : AppCompatActivity() {
             val player2Name = player2EditText.text.toString()
 
             // putExtra is used to use user entered names in ThirdActivity and to show their names later
+            // seit man palidzeja mans kollegis
             val intent = Intent(this, GameActivity::class.java)
             intent.putExtra("PLAYER1_NAME", player1Name)
             intent.putExtra("PLAYER2_NAME", player2Name)
