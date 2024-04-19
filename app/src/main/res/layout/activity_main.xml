@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#5A3535"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Tic-Tac-Toe Game!"
+        android:textSize="28sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/play_offline_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Play Offline with Your Friend!" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Or"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/play_robot_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Play with Computer!" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Or"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/play_online_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Play Online!" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:inputType="number"
+        android:padding="8dp"
+        android:hint="Enter game ID: //is not working yet :( "
+        android:textSize="20sp"
+        android:id="@+id/game_id_input"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/join_online_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Join Online Game!" />
+
+
+
+
+
+
+
+
+</LinearLayout>
