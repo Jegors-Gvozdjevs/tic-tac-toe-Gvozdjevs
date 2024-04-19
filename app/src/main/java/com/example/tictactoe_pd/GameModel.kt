@@ -11,13 +11,13 @@ data class GameModel (
 
 ){
 fun robot() {
-    val rnd = (0..8).random() // Генерируем случайное число от 1 до 9
-    val emptyCells = filled.indices.filter { filled[it].isEmpty() } // Получаем список доступных ячеек
+    val rnd = (0..8).random() // seit es meiginaju ieklaut tadu robota-funkciju, lai varetu spelet ar datoru
+    val emptyCells = filled.indices.filter { filled[it].isEmpty() } 
 
     if (emptyCells.isNotEmpty()) {
-        val index = emptyCells.random() // Выбираем случайную доступную ячейку
-        filled[index] = currentPlayer // Устанавливаем ход робота в выбранную ячейку
-        currentPlayer = if (currentPlayer == "X") "O" else "X" // Переключаем текущего игрока
+        val index = emptyCells.random() 
+        filled[index] = currentPlayer 
+        currentPlayer = if (currentPlayer == "X") "O" else "X" 
     }
 }
 }
